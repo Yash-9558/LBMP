@@ -1,8 +1,8 @@
 const mongoose = require("mongoose");
 require("dotenv").config();
 
-// exports.connect = () => {
-    mongoose.connect(process.env.MONGOURL || "mongodb+srv://Yash_Gohel:Nita4121978@cluster0.somzke1.mongodb.net/",{
+exports.connect = () => {
+    mongoose.connect(process.env.MONGOURL,{
         
     })
     .then(()=>{
@@ -13,4 +13,4 @@ require("dotenv").config();
         console.error(e);
         process.exit(1);
     })
-// }
+}
